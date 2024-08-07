@@ -1,0 +1,49 @@
+Concepts clés de Git et GitHub
+
+
+
+C’est quoi Git ?
+
+C'est un système de contrôle de version gratuit et open source; il est largement utilisé dans le monde du développement logiciel il permet à plusieurs développeurs de pouvoir travailler sur un même projet de façons structuré, il permet aussi de gérer les versions du code source de façons à ce que si jamais pour une quelconque raison on souhaite retourner à une versions antérieur du code c’est possible.
+
+
+C’est quoi GitHub ?
+
+
+GitHub est une plateforme en ligne qui permet de gérer des projets de développement logiciel en utilisant Git. Étant basé sur le cloud il offre aux développeurs la possibilité de stocker gérer suivre et collaborer à plusieurs sur un projet ; il facilite aussi l’utilisation de Git.
+
+Les concepts clés de Git
+
+1. Dépôt (Repository)
+C’est un répertoire contenant tous les fichiers de notre projet ainsi que l'historique des modifications. 
+2. Commit
+C’est un enregistrement à un instant t, de l'état de notre projet . Un commit doit contenir un message décrivant les modifications, et les changements apportés aux fichiers.
+3. Branche (Branch)
+Une branche est une version  de notre projet. Elle permet de travailler sur des fonctionnalités ou des correctifs indépendamment de la branche principale (souvent appelée main ou master). Les branches facilitent le développement en parallèle sans perturber le code stable.
+4. Merge (Fusion)
+La fusion (merge) est le processus de combinaison des modifications de différentes branches en une seule. Cela permet de rassembler les développements parallèles réalisés sur différentes branches.
+
+Les Commandes de base 
+
+
+Initialiser un dépôt :
+git init
+
+Pour voir s’il y a des fichiers nouveaux ou modifié qui ne sont pas encore enregistré :
+git status
+
+Ajouter des fichiers à l'index :
+git add 
+
+Enregistrer les modifications dans l'historique :
+git commit 
+
+Envoyer les modifications vers un dépôt distant :
+git push
+
+Récupérer et intégrer les modifications depuis un dépôt distant :
+git pull 
+
+
+Cloner un dépôt existant :
+git clone 
