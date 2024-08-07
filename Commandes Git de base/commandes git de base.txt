@@ -1,0 +1,30 @@
+Les Commandes de base 
+
+
+Initialiser un dépôt : Avec l'outil Git crée un dossier pour gérer les versions de notre projet 
+
+git init
+
+Pour voir s’il y a des fichiers nouveaux ou modifié qui ne sont pas encore enregistré :
+
+git status
+
+Ajouter des fichiers à l'index :
+
+git add 
+
+Enregistrer les modifications dans l'historique :
+
+git commit 
+
+Envoyer les modifications vers un dépôt distant (GitHub):
+git push
+
+Récupérer et intégrer les modifications depuis un dépôt distant (GitHub):
+
+git pull 
+
+
+Cloner un dépôt existant (depuis GitHub):
+
+git clone 

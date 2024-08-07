@@ -1,0 +1,14 @@
+Importance des pull requests et des revues de code.
+
+Les pull requests :
+Les pull requests permettent aux développeurs de proposer des modifications de code et de les partager
+avec l'équipe.
+
+Les Revues de Code :
+les revues de code permettent entre autre d’améliorer la qualité du code, détection précoce des 
+problèmes, apprentissage et partage de connaissances …
+
+En somme les pull requests et les revues de code sont des pratiques essentielles dans le développement
+logiciel moderne. Elles améliorent la qualité du code, facilitent la collaboration et le partage de connaissances, 
+et réduisent les risques de bugs et de problèmes de sécurité. En intégrant ces pratiques dans leur workflow,
+les équipes de développement peuvent produire des logiciels plus robustes, maintenables et évolutifs.
