@@ -1,0 +1,9 @@
+Concepts de routage et de navigation dans Next.js.
+
+Le routage et la navigation dans Next.js sont des concepts essentiels qui permettent de structurer 
+et de naviguer entre différentes pages de notre application web.
+
+C’est quoi le routage ?
+Le routage détermine quel composant doit etre rendu en fonction de l’URL.
+Le routage se fait via le répertoire /app ce repertoire contient toutes les pages de notre application.
+Ainsi chaque url valide de notre application correspond à un ficher ayant l’extension .tsx se trouvant dans le répertoire /app.
