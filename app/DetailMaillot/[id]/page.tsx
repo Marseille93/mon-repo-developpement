@@ -24,9 +24,10 @@ const articles = [
       "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-om-domicile-24-25-homme-3_4.jpg",
       "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-om-domicile-24-25-homme-4_4.jpg",
       "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-om-domicile-24-25-homme-5_4.jpg",
-      "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-om-domicile-24-25-homme-7_2.jpg"
+      "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-om-domicile-24-25-homme-7_2.jpg",
     ],
-    detail:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi veniam non, distinctio tempore quos nam dignissimos maiores vero dicta. Corporis molestias, sunt pariatur mollitia impedit neque vero amet tempora magni!'
+    detail:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi veniam non, distinctio tempore quos nam dignissimos maiores vero dicta. Corporis molestias, sunt pariatur mollitia impedit neque vero amet tempora magni!",
   },
   {
     id: 2,
@@ -41,9 +42,10 @@ const articles = [
       "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-om-exterieur-24-25-homme-4_6.jpg",
       "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-om-exterieur-24-25-homme-5_6.jpg",
       "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-om-exterieur-24-25-homme-6_6.jpg",
-      "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-om-exterieur-24-25-homme-8_2.png"
+      "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-om-exterieur-24-25-homme-8_2.png",
     ],
-    detail:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi veniam non, distinctio tempore quos nam dignissimos maiores vero dicta. Corporis molestias, sunt pariatur mollitia impedit neque vero amet tempora magni!'
+    detail:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi veniam non, distinctio tempore quos nam dignissimos maiores vero dicta. Corporis molestias, sunt pariatur mollitia impedit neque vero amet tempora magni!",
   },
   {
     id: 3,
@@ -58,9 +60,10 @@ const articles = [
       "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-om-third-24-25-homme-4_4.jpg",
       "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-om-third-24-25-homme-5_4.jpg",
       "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-om-third-24-25-homme-6_4.jpg",
-      "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-om-third-24-25-homme-8_4.jpg"
+      "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-om-third-24-25-homme-8_4.jpg",
     ],
-    detail:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi veniam non, distinctio tempore quos nam dignissimos maiores vero dicta. Corporis molestias, sunt pariatur mollitia impedit neque vero amet tempora magni!'
+    detail:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi veniam non, distinctio tempore quos nam dignissimos maiores vero dicta. Corporis molestias, sunt pariatur mollitia impedit neque vero amet tempora magni!",
   },
   {
     id: 4,
@@ -75,9 +78,10 @@ const articles = [
       "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-om-gardien-24-25-sable-4_4.jpg",
       "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-om-gardien-24-25-sable-5_4.jpg",
       "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-om-gardien-24-25-sable-6_4.jpg",
-      "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-om-gardien-24-25-sable-8_2.jpg"
+      "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-om-gardien-24-25-sable-8_2.jpg",
     ],
-    detail:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi veniam non, distinctio tempore quos nam dignissimos maiores vero dicta. Corporis molestias, sunt pariatur mollitia impedit neque vero amet tempora magni!'
+    detail:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi veniam non, distinctio tempore quos nam dignissimos maiores vero dicta. Corporis molestias, sunt pariatur mollitia impedit neque vero amet tempora magni!",
   },
   {
     id: 5,
@@ -91,9 +95,10 @@ const articles = [
       "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-authentique-om-domicile-2023-2024-blanc-3_8.jpg",
       "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-authentique-om-domicile-2023-2024-blanc-4_8.jpg",
       "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-authentique-om-domicile-2023-2024-blanc-5_8.jpg",
-      "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-authentique-om-domicile-2023-2024-blanc-7_2.png"
+      "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-authentique-om-domicile-2023-2024-blanc-7_2.png",
     ],
-    detail:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi veniam non, distinctio tempore quos nam dignissimos maiores vero dicta. Corporis molestias, sunt pariatur mollitia impedit neque vero amet tempora magni!'
+    detail:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi veniam non, distinctio tempore quos nam dignissimos maiores vero dicta. Corporis molestias, sunt pariatur mollitia impedit neque vero amet tempora magni!",
   },
   {
     id: 6,
@@ -108,9 +113,10 @@ const articles = [
       "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-authentique-om-exterieur-2023-2024-bleu-4_6.jpg",
       "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-authentique-om-exterieur-2023-2024-bleu-5_6.jpg",
       "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-authentique-om-exterieur-2023-2024-bleu-6_6.jpg",
-      "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-authentique-om-exterieur-2023-2024-bleu-7_6.jpg"
+      "https://boutique.om.fr/media/catalog/product/cache/c0bdcf366c539c427f05e11e3fbd132b/m/a/maillot-authentique-om-exterieur-2023-2024-bleu-7_6.jpg",
     ],
-    detail:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi veniam non, distinctio tempore quos nam dignissimos maiores vero dicta. Corporis molestias, sunt pariatur mollitia impedit neque vero amet tempora magni!'
+    detail:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi veniam non, distinctio tempore quos nam dignissimos maiores vero dicta. Corporis molestias, sunt pariatur mollitia impedit neque vero amet tempora magni!",
   },
 ];
 
@@ -127,44 +133,49 @@ export default function DetailMaillot({ params }: Props) {
         <div className=" bg-white h-screen">
           <Header />
           <main className="flex items-center  w-full justify-start flex-col lg:flex-row lg:mt-16">
-          <Swiper
-            spaceBetween={30}
-            centeredSlides={true}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper w-1/2 mt-56   lg:w-2/6 lg:mt-8 lg:ml-20"
-          >
-            {articles[index].image.map((imgSrc) => (
-              <SwiperSlide key={params.id} >
-                <img className="w-full " src={imgSrc} alt={articles[index].title} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <div className="ml-28 w-full lg:w-1/2">
-          <h1 className="text-6xl font-bold text-sky-950">{articles[index].title}</h1>
-          <p className="text-sky-950">{articles[index].description}</p>
-          <p className="w-3/4">{articles[index].detail}</p>
-          <button className="btn btn-primary mt-10">Commander</button>
-          </div>
+            <Swiper
+              spaceBetween={30}
+              centeredSlides={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={true}
+              modules={[Autoplay, Pagination, Navigation]}
+              className="mySwiper w-1/2 mt-56   lg:w-2/6 lg:mt-8 lg:ml-20"
+            >
+              {articles[index].image.map((imgSrc) => (
+                <SwiperSlide key={params.id}>
+                  <img
+                    className="w-full "
+                    src={imgSrc}
+                    alt={articles[index].title}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <div className="ml-28 w-full lg:w-1/2">
+              <h1 className="text-6xl font-bold text-sky-950">
+                {articles[index].title}
+              </h1>
+              <p className="text-sky-950">{articles[index].description}</p>
+              <p className="w-3/4">{articles[index].detail}</p>
+              <button className="btn btn-primary mt-10">Commander</button>
+            </div>
           </main>
           <main className="bg-white">
-            <h3 className="text-center font-bold text-3xl text-black mb-40 underline">Autres Produits</h3>
+            <h3 className="text-center font-bold text-3xl text-black mb-40 underline">
+              Autres Produits
+            </h3>
             <div className="w-full flex justify-center">
-            <div className=" w-3/4 ">
-            <Products/>
+              <div className=" w-3/4 ">
+                <Products />
+              </div>
             </div>
-            </div>
-            
-            
           </main>
-          
         </div>
       );
     }
