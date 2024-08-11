@@ -64,11 +64,9 @@ export default function Products() {
             <h2 className="card-title">{article.title}</h2>
             <p>{article.description}</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">
-                <Link href={`../../DetailMaillot/${article.id}`}>
+                <Link className="btn btn-primary" href={`../../DetailMaillot/${article.id}`}>
                   Voir Détail
                 </Link>
-              </button>
             </div>
           </div>
         </div>

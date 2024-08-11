@@ -21,9 +21,7 @@ export default function Home() {
               Ici le site de vente de maillot de l OM basé au SENEGAL <br />A
               JAMAIS LES PREMIERS
             </p>
-            <button className="btn btn-primary">
-              <Link href="./NosProduits">Voir Nos Produits</Link>
-            </button>
+              <Link className="btn btn-primary" href="./NosProduits">Voir Nos Produits</Link>
           </div>
         </div>
       </div>
