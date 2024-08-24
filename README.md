@@ -1,45 +1,30 @@
-**Brève explication des fonctionnalités clés de Nest.js**
-**I. Qu'est ce que Nest.js**
-NestJS est un framework pour construire des applications serveur (backend) en Node.js. Il est conçu pour être scalable (facile à agrandir), testable, et maintenable. NestJS utilise TypeScript par défaut, ce qui nous permet d'avoir un code plus structuré et moins sujet aux erreurs.
+**Brève explication du processus de connexion et des avantages de TypeORM**
 
-**II. Comment Créer un Projet Nest.js:**
+**1. Installation et Configuration :**
+Installation : On commence par installer les dépendances nécessaires (@nestjs/typeorm, typeorm, et mysql2). avec la commande: npm install --save @nestjs/typeorm typeorm mysql2
+Configuration : Ensuite, on configure TypeORM dans app.module.ts en définissant les informations de connexion (comme le type de base de données, l'hôte, le port, le nom d'utilisateur, le mot de passe, et le nom de la base de données).
 
-On ouvre notre Terminal pour exécuter la commande suivante:
-**sudo npm i -g @nestjs/cli**
-cette commande vas installer NestJS CLI (outil en ligne de commande).
-Ensuite la commande suivante qui servira à créer le répertoire du projet et y mettre les fichiers de base que le projet a besoin.
-**nest new my-project**
+**2. Définition des Entités :**
+Une entité est une classe qui représente une table dans la base de données. Chaque propriété de la classe correspond à une colonne de la table.
+On crée ces classes entités en utilisant les décorateurs fournis par TypeORM (comme @Entity(), @Column()).
 
-**III. Les avantages de Nest.js:**
+**3. Création de Modules et Services :**
+On crée un module pour chaque entité.
+Les services utilisent des repositories TypeORM pour interagir avec la base de données, permettant d’effectuer des opérations comme find, save, delete.
 
-1. Structure claire et organisée :
-   NestJS utilise une architecture modulaire basée sur les modules, ce qui aide à organiser ton code de manière propre et compréhensible. Chaque fonctionnalité de l'application peut être séparée en modules, ce qui rend le développement plus facile à gérer.
+**4. Interaction avec la Base de Données :**
+Une fois configuré, NestJS permet d'injecter le Repository correspondant à une entité dans les services, facilitant ainsi les opérations CRUD (Create, Read, Update, Delete) sur la base de données via TypeORM.
 
-2. TypeScript intégré :
-   NestJS est construit avec TypeScript, ce qui apporte des avantages comme la vérification de types et une meilleure gestion des erreurs. Cela permet d'éviter des bugs courants et de rendre ton code plus fiable.
+**Avantages de TypeORM :**
 
-**IV. Les Fonctionnalité clés de Nest.js :**
+ORM Complet et Flexible : TypeORM est un ORM (Object-Relational Mapping) qui simplifie l'interaction avec la base de données en permettant de manipuler les données comme des objets en TypeScript/JavaScript plutôt que d'écrire des requêtes SQL complexes.
 
-1. Les Modules:
-   Modules sont comme des sections de notre application. Par exemple, si on a une application de gestion d'utilisateur, on pourrait avoir un module User qui gère tout ce qui est lié aux utilisateurs.
-   Chaque module est un fichier TypeScript qui regroupe des fonctionnalités (contrôleurs, services, etc.) liées à une partie spécifique de notre application.
+Soutien Multi-Base de Données : TypeORM est compatible avec plusieurs bases de données, y compris MySQL, PostgreSQL, SQLite, et bien d'autres. Tu peux changer de base de données sans modifier ton code.
 
-2. Les Contrôleurs (Controllers) :
+Synchronisation Automatique : Avec l'option synchronize, TypeORM peut automatiquement synchroniser les schémas de la base de données avec les entités définies dans ton code. Cela simplifie le développement, bien que cette option soit à utiliser avec précaution en production.
 
-   Les contrôleurs sont responsables de gérer les requêtes HTTP (par exemple, GET, POST). Ils reçoivent les requêtes, appellent les services nécessaires, et renvoient une réponse.
-   Par exemple, si on veux récupérer la liste des utilisateurs, nous allons créer un contrôleur qui écoute une requête GET et retourne les données.
+Migration de Données : TypeORM offre des fonctionnalités de migration, permettant de gérer les changements dans le schéma de la base de données de manière structurée et versionnée.
 
-3. Les Services :
+Intégration Naturelle avec NestJS : TypeORM s'intègre parfaitement avec NestJS, profitant de la structure modulaire et de l'injection de dépendances de NestJS pour gérer les entités, repositories, et services de manière claire et maintenable.
 
-   Les services sont des classes qui contiennent la logique métier de notre application. Nous pouvons y faire des calculs, récupèrer des données depuis une base de données, etc.
-   Les contrôleurs utilisent les services pour effectuer des actions spécifiques.
-
-4. Les Décorateurs :
-
-   Les décorateurs sont des fonctions spéciales utilisées dans NestJS pour ajouter des métadonnées à des classes, méthodes ou propriétés. Par exemple, @Controller() pour définir un contrôleur, ou @Get() pour indiquer qu'une méthode doit gérer une requête GET.
-
-**V. Exécution:**
-
-Pour Exécuter tout ceci on ouvre un Terminal, on se place dans le répertoire du projet et on exécute la commande suivante:
-**npm run start**
-Ainsi nous pouvons aller sur notre navigateur et taper http://localhost:3000 (si l'application est exécuter sur le port 3000) ou on utilise Postman.
+En résumé, TypeORM te permet de travailler avec ta base de données de manière plus intuitive et structurée, tout en tirant parti de la puissance et de la flexibilité de NestJS.
