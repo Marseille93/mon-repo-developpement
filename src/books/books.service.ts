@@ -1,16 +1,24 @@
 import { Injectable } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
-import { BooksEntity } from './entities/books.entity';
+
+interface Book {
+  titre: string;
+  auteur: string;
+  annéeDePublication: number;
+}
 
 @Injectable()
 export class BooksService {
-  constructor(
-    @InjectRepository(BooksEntity)
-    private booksRepository: Repository<BooksEntity>,
-  ) {}
+  private books: Book[] = [];
 
-  async findAll(): Promise<BooksEntity[]> {
-    return await this.booksRepository.find();
+  findAll(): Book[] {
+    return this.books;
+  }
+
+  create(book: Book) {
+    this.books.push(book);
+  }
+
+  findByTitle(titre: string): Book | undefined {
+    return this.books.find((book) => book.titre === titre);
   }
 }
