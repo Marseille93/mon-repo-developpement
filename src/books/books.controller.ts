@@ -1,26 +1,40 @@
-import { Controller, Get, Post, Body, Param } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Post,
+  Put,
+} from '@nestjs/common';
 import { BooksService } from './books.service';
-interface Book {
-  titre: string;
-  auteur: string;
-  annéeDePublication: number;
-}
+import { CreateBookDto } from './create-book.dto';
+
 @Controller('books')
 export class BooksController {
   constructor(private readonly booksService: BooksService) {}
+  @Post('add')
+  create(@Body() createBookDto: CreateBookDto) {
+    return this.booksService.create(createBookDto);
+  }
 
   @Get()
-  findAll(): Book[] {
+  findAll() {
     return this.booksService.findAll();
   }
 
-  @Post()
-  create(@Body() book) {
-    this.booksService.create(book);
+  @Get(':id')
+  findOne(@Param('id') id: string) {
+    return this.booksService.findOne(+id);
   }
 
-  @Get(':title')
-  findByTitle(@Param('title') title: string): Book {
-    return this.booksService.findByTitle(title);
+  @Put(':id')
+  update(@Param('id') id: string, @Body() updateBookDto: CreateBookDto) {
+    return this.booksService.update(+id, updateBookDto);
+  }
+
+  @Delete(':id')
+  remove(@Param('id') id: string) {
+    return this.booksService.remove(+id);
   }
 }

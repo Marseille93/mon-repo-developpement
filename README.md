@@ -1,45 +1,36 @@
-**Brève explication des fonctionnalités clés de Nest.js**
-**I. Qu'est ce que Nest.js**
-NestJS est un framework pour construire des applications serveur (backend) en Node.js. Il est conçu pour être scalable (facile à agrandir), testable, et maintenable. NestJS utilise TypeScript par défaut, ce qui nous permet d'avoir un code plus structuré et moins sujet aux erreurs.
+**Concepts Spécifiques Utilisés pour Créer et Gérer les APIs**
 
-**II. Comment Créer un Projet Nest.js:**
+**Validation et Transformation des Données**
+**Validation :** Assure que les données envoyées dans une requête répondent à des critères spécifiques avant qu'elles ne soient traitées. Cela aide à éviter les erreurs et à garantir que les données sont au bon format.
+**Transformation :** Modifie ou reformate les données entrantes si nécessaire pour les adapter au format attendu par l'application.
 
-On ouvre notre Terminal pour exécuter la commande suivante:
-**sudo npm i -g @nestjs/cli**
-cette commande vas installer NestJS CLI (outil en ligne de commande).
-Ensuite la commande suivante qui servira à créer le répertoire du projet et y mettre les fichiers de base que le projet a besoin.
-**nest new my-project**
+**Gestion des Exceptions**
+**Gestion des Erreurs :** Implémente des mécanismes pour gérer les erreurs de manière cohérente. Par exemple, si une ressource demandée n'existe pas, le système renvoie une réponse indiquant l'erreur de manière claire (comme une erreur 404).
+Exceptions Spécifiques : Utilise des exceptions prédéfinies pour signaler des erreurs courantes, telles que NotFoundException pour indiquer qu'une ressource n'a pas été trouvée.
 
-**III. Les avantages de Nest.js:**
+**Opérations CRUD**
+**Création :** Permet d'ajouter de nouvelles ressources dans la base de données. Les données sont généralement envoyées dans le corps de la requête.
+**Lecture :** Permet de récupérer des informations sur les ressources existantes. Cela peut inclure la récupération de toutes les ressources ou d'une ressource spécifique par son identifiant.
+**Mise à Jour :** Permet de modifier les ressources existantes avec de nouvelles informations. Les données de mise à jour sont envoyées dans le corps de la requête et sont utilisées pour modifier les informations de la ressource ciblée.
+**Suppression :** Permet de supprimer des ressources existantes. La demande de suppression est généralement basée sur un identifiant de ressource.
 
-1. Structure claire et organisée :
-   NestJS utilise une architecture modulaire basée sur les modules, ce qui aide à organiser ton code de manière propre et compréhensible. Chaque fonctionnalité de l'application peut être séparée en modules, ce qui rend le développement plus facile à gérer.
+**Gestion des Requêtes et Réponses**
+**Requêtes :** Les données envoyées par le client pour demander des opérations sur les ressources. Les requêtes peuvent inclure des paramètres, des données dans le corps de la requête, ou des informations dans l'URL.
+**Réponses :** Les données envoyées par le serveur en réponse aux requêtes. Cela peut inclure les résultats des opérations demandées, des messages d'erreur, ou des confirmations de succès.
 
-2. TypeScript intégré :
-   NestJS est construit avec TypeScript, ce qui apporte des avantages comme la vérification de types et une meilleure gestion des erreurs. Cela permet d'éviter des bugs courants et de rendre ton code plus fiable.
+**Définition des Routes**
+**Routes :** Les URL qui déterminent l'accès à différentes opérations sur les ressources. Chaque route est associée à une opération spécifique (comme récupérer, créer, mettre à jour ou supprimer).
 
-**IV. Les Fonctionnalité clés de Nest.js :**
+**Repository Pattern**
+**Gestion des Données :** Utilise des méthodes spécifiques pour interagir avec la base de données. Cela inclut la recherche, la sauvegarde, la mise à jour et la suppression des données.
 
-1. Les Modules:
-   Modules sont comme des sections de notre application. Par exemple, si on a une application de gestion d'utilisateur, on pourrait avoir un module User qui gère tout ce qui est lié aux utilisateurs.
-   Chaque module est un fichier TypeScript qui regroupe des fonctionnalités (contrôleurs, services, etc.) liées à une partie spécifique de notre application.
+**Résumé**
 
-2. Les Contrôleurs (Controllers) :
+**Validation et Transformation :** Assurer la qualité et le format correct des données envoyées.
+**Gestion des Exceptions :** Traiter les erreurs de manière appropriée pour informer les utilisateurs.
+**Opérations CRUD :** Créer, lire, mettre à jour et supprimer des ressources.
+**Requêtes et Réponses :** Gérer les données échangées entre le client et le serveur.
+**Routes :** Définir les chemins pour accéder aux différentes opérations sur les ressources.
+**Repository Pattern :** Gérer les interactions avec la base de données.
 
-   Les contrôleurs sont responsables de gérer les requêtes HTTP (par exemple, GET, POST). Ils reçoivent les requêtes, appellent les services nécessaires, et renvoient une réponse.
-   Par exemple, si on veux récupérer la liste des utilisateurs, nous allons créer un contrôleur qui écoute une requête GET et retourne les données.
-
-3. Les Services :
-
-   Les services sont des classes qui contiennent la logique métier de notre application. Nous pouvons y faire des calculs, récupèrer des données depuis une base de données, etc.
-   Les contrôleurs utilisent les services pour effectuer des actions spécifiques.
-
-4. Les Décorateurs :
-
-   Les décorateurs sont des fonctions spéciales utilisées dans NestJS pour ajouter des métadonnées à des classes, méthodes ou propriétés. Par exemple, @Controller() pour définir un contrôleur, ou @Get() pour indiquer qu'une méthode doit gérer une requête GET.
-
-**V. Exécution:**
-
-Pour Exécuter tout ceci on ouvre un Terminal, on se place dans le répertoire du projet et on exécute la commande suivante:
-**npm run start**
-Ainsi nous pouvons aller sur notre navigateur et taper http://localhost:3000 (si l'application est exécuter sur le port 3000) ou on utilise Postman.
+Ces concepts sont essentiels pour créer des APIs RESTful robustes et fiables, en garantissant que les données sont correctement validées, les erreurs bien gérées, et les opérations sur les ressources correctement exécutées.
