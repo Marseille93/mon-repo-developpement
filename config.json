@@ -1,0 +1,8 @@
+ {
+ "DATABASE_HOST":"localhost",
+ "DATABASE_PORT":"3306",
+ "DATABASE_USER":"marseille",
+ "DATABASE_PASSWORD":"marseille",
+ "DATABASE_DBNAME":"nestApp",
+ "JWT_SECRET":"d5a1f3acf0d7db0efa5f016acff34bb75884ve077a7ca5c6b267385f0e1db501"
+ }
