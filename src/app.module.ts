@@ -11,12 +11,12 @@ import * as config from '../config.json';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      load: [() => config], // Charge les configurations depuis config.json
-      isGlobal: true, // Rendre les variables accessibles globalement
+      load: [() => config],
+      isGlobal: true,
     }),
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: config.DATABASE_HOST, // Accès direct à config.json
+      host: config.DATABASE_HOST,
       port: parseInt(config.DATABASE_PORT),
       username: config.DATABASE_USER,
       password: config.DATABASE_PASSWORD,

@@ -22,10 +22,8 @@ export class AuthController {
   }
   @Post('login')
   async login(@Body() authBody: AuthBody) {
-    // Utiliser le service d'authentification pour vérifier l'utilisateur
     const user = await this.authService.login(authBody);
 
-    // Si l'utilisateur est trouvé, retournez les informations de l'utilisateur
     if (user) {
       return { message: 'Login successful', user };
     } else {

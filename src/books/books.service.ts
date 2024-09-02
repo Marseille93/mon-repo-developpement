@@ -6,21 +6,17 @@ import { CreateBookDto } from './create-book.dto';
 
 @Injectable()
 export class BooksService {
-  //Injection de dépendance
   constructor(
     @InjectRepository(BooksEntity)
     private booksRepository: Repository<BooksEntity>,
   ) {}
-  //Methode pour la création de livre
   create(createBookDto: CreateBookDto): Promise<BooksEntity> {
     const book = this.booksRepository.create(createBookDto);
     return this.booksRepository.save(book);
   }
-  //Methode pour recupérer tout les livres
   findAll(): Promise<BooksEntity[]> {
     return this.booksRepository.find();
   }
-  //Methode pour recupérer un livre par son id
   async findOne(id: number): Promise<BooksEntity> {
     const book = await this.booksRepository.findOne({
       where: { id },
