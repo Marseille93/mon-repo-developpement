@@ -1,14 +1,7 @@
-import {
-  Body,
-  Controller,
-  Get,
-  Post,
-  Request,
-  UseGuards,
-} from '@nestjs/common';
+import { Body, Controller, Post } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { JwtAuthGuard } from './jwt-auth.guard';
 import { UsersService } from 'src/users/users.service';
+import { ApiTags } from '@nestjs/swagger/dist/decorators/api-use-tags.decorator';
 
 export type AuthBody = {
   email: string;
@@ -16,7 +9,7 @@ export type AuthBody = {
   genre: string;
   role: string;
 };
-
+@ApiTags('auth')
 @Controller('auth')
 export class AuthController {
   constructor(
@@ -38,12 +31,5 @@ export class AuthController {
     } else {
       return { message: 'Invalid email or password' };
     }
-  }
-  @UseGuards(JwtAuthGuard)
-  @Get()
-  async authentificateUser(@Request() request) {
-    console.log(request.user);
-    const userId: number = request.user.userId;
-    return await this.userService.getUser(userId);
   }
 }
