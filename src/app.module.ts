@@ -15,7 +15,7 @@ import * as config from '../config.json';
       isGlobal: true,
     }),
     TypeOrmModule.forRoot({
-      type: 'mysql',
+      type: 'postgres',
       host: config.DATABASE_HOST,
       port: parseInt(config.DATABASE_PORT),
       username: config.DATABASE_USER,
@@ -23,6 +23,9 @@ import * as config from '../config.json';
       database: config.DATABASE_DBNAME,
       entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true,
+      ssl: {
+        rejectUnauthorized: false,
+      },
     }),
     BooksModule,
     AuthModule,

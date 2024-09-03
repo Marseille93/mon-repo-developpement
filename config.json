@@ -1,8 +1,8 @@
  {
- "DATABASE_HOST":"localhost",
- "DATABASE_PORT":"3306",
+ "DATABASE_HOST":"dpg-cr9gvh8gph6c73cvg30g-a.oregon-postgres.render.com",
+ "DATABASE_PORT":"5432",
  "DATABASE_USER":"marseille",
- "DATABASE_PASSWORD":"marseille",
- "DATABASE_DBNAME":"nestApp",
+ "DATABASE_PASSWORD":"MIAM9VMOAKhJX1ubDBUCTDMBYvBBRAIP",
+ "DATABASE_DBNAME":"nestapi_7uhn",
  "JWT_SECRET":"d5a1f3acf0d7db0efa5f016acff34bb75884ve077a7ca5c6b267385f0e1db501"
  }
