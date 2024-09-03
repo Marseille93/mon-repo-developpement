@@ -22,7 +22,7 @@ import * as config from '../config.json';
       password: config.DATABASE_PASSWORD,
       database: config.DATABASE_DBNAME,
       entities: ['dist/**/*.entity{.ts,.js}'],
-      synchronize: true,
+      synchronize: false,
       ssl: {
         rejectUnauthorized: false,
       },
