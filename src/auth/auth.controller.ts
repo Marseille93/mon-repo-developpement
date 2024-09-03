@@ -7,8 +7,8 @@ import { AuthDto } from './auth.dto';
 export type AuthBody = {
   email: string;
   password: string;
-  genre: string;
-  role: string;
+  genre?: string;
+  role?: string;
 };
 export class LoginResponse {
   message: string;
@@ -34,11 +34,20 @@ export class AuthController {
   }
 
   @Post('login')
-  @ApiBody({ type: AuthDto })
+  @ApiBody({
+    schema: {
+      type: 'object',
+      properties: {
+        email: { type: 'string' },
+        password: { type: 'string' },
+      },
+      required: ['email', 'password'],
+    },
+  })
   @ApiResponse({ status: 200, description: 'Login successful.' })
   @ApiResponse({ status: 401, description: 'Invalid email or password.' })
-  async login(@Body() authDto: AuthDto): Promise<LoginResponse> {
-    const user = await this.authService.login(authDto);
+  async login(@Body() authBody: AuthBody): Promise<LoginResponse> {
+    const user = await this.authService.login(authBody);
 
     if (user) {
       return { message: 'Login successful', user };
