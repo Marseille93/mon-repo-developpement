@@ -13,11 +13,14 @@ import { CreateBookDto } from './create-book.dto';
 import { RolesGuard } from 'src/auth/roles.guard';
 import { Roles } from 'src/auth/roles.decorator';
 import { ApiTags } from '@nestjs/swagger/dist/decorators/api-use-tags.decorator';
+import { ApiBearerAuth } from '@nestjs/swagger/dist/decorators/api-bearer.decorator';
 @ApiTags('books')
 @Controller('books')
 export class BooksController {
   constructor(private readonly booksService: BooksService) {}
+
   @Post('add')
+  @ApiBearerAuth()
   @UseGuards(RolesGuard)
   @Roles('admin')
   create(@Body() createBookDto: CreateBookDto) {
@@ -30,11 +33,13 @@ export class BooksController {
   }
 
   @Get(':id')
+  @ApiBearerAuth()
   findOne(@Param('id') id: string) {
     return this.booksService.findOne(+id);
   }
 
   @Put(':id')
+  @ApiBearerAuth()
   @UseGuards(RolesGuard)
   @Roles('admin')
   update(@Param('id') id: string, @Body() updateBookDto: CreateBookDto) {
@@ -42,6 +47,7 @@ export class BooksController {
   }
 
   @Delete(':id')
+  @ApiBearerAuth()
   @UseGuards(RolesGuard)
   @Roles('admin')
   remove(@Param('id') id: string) {

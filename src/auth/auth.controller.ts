@@ -2,6 +2,7 @@ import { Body, Controller, Post } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { UsersService } from 'src/users/users.service';
 import { ApiTags } from '@nestjs/swagger/dist/decorators/api-use-tags.decorator';
+import { AuthDto } from './auth.dto';
 
 export type AuthBody = {
   email: string;
@@ -9,6 +10,13 @@ export type AuthBody = {
   genre: string;
   role: string;
 };
+export class LoginResponse {
+  message: string;
+  user?: any;
+}
+
+import { ApiResponse, ApiBody } from '@nestjs/swagger';
+
 @ApiTags('auth')
 @Controller('auth')
 export class AuthController {
@@ -16,13 +24,21 @@ export class AuthController {
     private readonly authService: AuthService,
     private readonly userService: UsersService,
   ) {}
+
   @Post('register')
-  async register(@Body() authBody: AuthBody) {
-    return this.authService.register(authBody);
+  @ApiBody({ type: AuthDto })
+  @ApiResponse({ status: 201, description: 'User registered successfully.' })
+  @ApiResponse({ status: 400, description: 'Invalid input.' })
+  async register(@Body() authDto: AuthDto) {
+    return this.authService.register(authDto);
   }
+
   @Post('login')
-  async login(@Body() authBody: AuthBody) {
-    const user = await this.authService.login(authBody);
+  @ApiBody({ type: AuthDto })
+  @ApiResponse({ status: 200, description: 'Login successful.' })
+  @ApiResponse({ status: 401, description: 'Invalid email or password.' })
+  async login(@Body() authDto: AuthDto): Promise<LoginResponse> {
+    const user = await this.authService.login(authDto);
 
     if (user) {
       return { message: 'Login successful', user };
